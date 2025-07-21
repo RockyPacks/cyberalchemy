@@ -1,0 +1,97 @@
+body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #1a1a2e;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+        }
+        .card-hover {
+            transition: all 0.4s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+        }
+        .neon-effect {
+            text-shadow: 0 0 10px rgba(110, 142, 251, 0.8),
+                         0 0 20px rgba(167, 119, 227, 0.6);
+        }
+        .pulse {
+            animation: pulse 2.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .floating {
+            animation: floating 5s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 24px rgba(31, 38, 135, 0.3);
+        }
+        .ai-network {
+            position: relative;
+            overflow: hidden;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .content-overlay {
+            position: relative;
+            z-index: 1;
+            padding: 2rem;
+        }
+        .hover-glow:hover {
+            filter: drop-shadow(0 0 8px rgba(110, 142, 251, 0.7));
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #6e8efb;
+            color: white;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            z-index: 1000;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .scroll-to-top.show {
+            display: block;
+            opacity: 1;
+        }
+        .scroll-to-top:hover {
+            transform: scale(1.1);
+        }
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            border-color: #6e8efb;
+            box-shadow: 0 0 8px rgba(110, 142, 251, 0.5);
+            outline: none;
+        }
+        @media (max-width: 768px) {
+            .content-overlay {
+                padding: 1rem;
+            }
+            .grid-cols-1 {
+                grid-template-columns: 1fr;
+            }
+        }
